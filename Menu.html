@@ -9,128 +9,152 @@
     <link rel="stylesheet" href="Menu.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-
 </head>
 <body>
 <header>
+    <!--Boton de Menu-->
     <div class="main-nav">
         <div class="left-nav">
             <i class="bi bi-list"></i>
             <span class="left-nav-name">Menu</span>
         </div>
+        <!--Menu-->
         <ul class="list-fill-nav">
             <li><button class="close-menu"><i class="bi bi-x-lg"></i></button></li>
             <li>MENU PRINCIPAL</li>
             <!--EJEMPLO DE DEMOSTRACION-->
-            <li><a href="">Productos</a>
+            <li>
+                <!--Ejemplo de Sub-menu-->
+                <img src="data:image/png;base64,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" class="img">
+                <a>Productos 1</a>
                 <ul class="sub-menu">
-                    <li><button class="Back-menu">Volver al menu</button></li>
-                    <li><a href="#">Algunos Productos</a></li>
-                    <li><a href="#">Submenú 2</a></li>
-                    <li><a href="#">Submenú 3</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
-                    <li><a href="">Hola</a></li>
+                    <!--Si se desea cambiar la imagen por un Texto, eliminar la etiqueta i y agregar el texto
+                        Ejemplo
+                     <li><button class="Back-menu">VOLVER AL MENU</button></li>
 
+                    -->
+                    <li><button class="Back-menu"><i class="bi bi-caret-left"></i></button></li>
+                    <li><a>Descripcion de Sub-menu</a></li>
+                    <li><a href="https://www.google.com.pe/?hl=es" >Producto1</a></li>
+                    <li><a href="https://www.google.com.pe/?hl=es">Producto2</a></li>
+                    <!--Ejemplo de segundo Submenu -->
+                    <li>
+                        <a>Producto3</a>
+                        <ul class="sub2-menu">
+                            <li><button class="Back2-menu"><i class="bi bi-caret-left"></i></button></li>
+                            <li><a>Descripcion de Sub2-menu</a></li>
+                            <li><a href="https://www.google.com.pe/?hl=es">Producto1</a></li>
+                            <li><a href="">Producto2</a></li>
+                            <li><a href="">Producto3</a></li>
+                            <li><a href="">Producto4</a></li>
+                            <li><a href="">Producto5</a></li>
+                            <li><a href="">Producto6</a></li>
+                            <li><a href="">Producto7</a></li>
+                            <li><a href="">Producto8</a></li>
+                            <li><a href="">Producto9</a></li>
+                            <li><a href="">Producto10</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Producto4</a></li>
+                    <li><a href="">Producto5</a></li>
+                    <li><a href="">Producto6</a></li>
+                    <li><a href="">Producto7</a></li>
+                    <li><a href="">Producto8</a></li>
+                    <li><a href="">Producto9</a></li>
+                    <li><a href="">Producto10</a></li>
+                    
                 </ul>
             </li>
             <!--EJEMPLO PARA REPLICAR, SE PUEDE AGREGAR MAS Li-->
             <li>
-                <a href="">Acerca de</a>
+                <img src="https://t4.ftcdn.net/jpg/04/63/63/59/360_F_463635935_IweuYhCqZRtHp3SLguQL8svOVroVXvvZ.jpg" class="img">
+                <a>Productos 2</a>
                 <ul class="sub-menu">
-                    <li><button class="Back-menu">Volver al menu</button></li>
-                    <li><a href="#">Submenú 1</a></li>
-                    <li><a href="#">Submenú 2</a></li>
-                    <li><a href="#">Submenú 3</a></li>
+                    <li><button class="Back-menu"><i class="bi bi-caret-left"></i></button></li>
+                    <li><a href="">Algunos Productos</a></li>
+                    <li><a href="">Producto1</a></li>
+                    <li><a href="">Producto2</a></li>
+                    <li><a href="">Producto3</a></li>
+                    <li><a href="">Producto4</a></li>
+                    <li><a href="">Producto5</a></li>
+                    <li><a href="">Producto6</a></li>
+                    <li><a href="">Producto7</a></li>
+                    <li><a href="">Producto8</a></li>
+                    <li><a href="">Producto9</a></li>
+                    <li><a href="">Producto10</a></li>
                 </ul>
             </li>
             <!--AQUI TERMINA-->
-            <li><a href="">Biblioteca</a>
+            <li>
+                <a>Productos 3</a>
                 <ul class="sub-menu">
-                    <li><button class="Back-menu">Volver al menu</button></li>
-                    <li><a href="#">Submenú 1</a></li>
-                    <li><a href="#">Submenú 2</a></li>
-                    <li><a href="#">Submenú 3</a></li>
-                </ul>
-            </li>
-            <li><a href="">Más</a>
-                <ul class="sub-menu">
-                    <li><button class="Back-menu">Volver al menu</button></li>
-                    <li><a href="#">Submenú 1</a></li>
-                    <li><a href="#">Submenú 2</a></li>
-                    <li><a href="#">Submenú 3</a></li>
-                </ul>
-            </li>
-            <li><a href="">1</a>
-                <ul class="sub-menu">
-                    <li><button class="Back-menu">Volver al menu</button></li>
-                    <li><a href="#">Submenú 1</a></li>
-                    <li><a href="#">Submenú 2</a></li>
-                    <li><a href="#">Submenú 3</a></li>
-                </ul>
-            </li>
-            <li><a href="">Hola</a></li>
-            <li><a href="">Hola</a></li>
-            <li><a href="">Hola</a></li>
-            <li><a href="">Hola</a></li>
-            <li><a href="">Hola</a></li>
-            <li><a href="">Hola</a></li>
-            <li><a href="">Hola</a></li>
-            <li><a href="">Hola</a></li>
-            <li><a href="">Hola</a></li>
-            <li><a href="">Hola</a></li>
-            <li><a href="">Hola</a></li>
-            <li><a href="">Hola</a></li>
-            <li><a href="">Hola</a></li>
-            <li><a href="">Hola</a></li>
-            <li><a href="">Hola</a></li>
-            <li><a href="">Hola</a></li>
-            <li><a href="">Hola</a></li>
-            <li><a href="">Hola</a></li>
-            <li><a href="">Hola</a></li>
-            <li><a href="">Hola</a></li>
-            <li><a href="">Hola</a></li>
-            <li><a href="">Hola</a></li>
-            <li><a href="">Hola</a></li>
-            <li><a href="">Hola</a></li>
-            <li><a href="">Hola</a></li>
-            <li><a href="">Hola</a></li>
-            <li><a href="">Hola</a></li>
-            <li><a href="">Hola</a></li>
+                    <li><button class="Back-menu"><i class="bi bi-caret-left"></i></button></li>
+                    <li><a href="">Algunos Productos</a></li>
+                    <li><a href="">Producto1</a></li>
+                    <li><a href="">Producto2</a></li>
+                    <li><a href="">Producto3</a></li>
+                    <li><a href="">Producto4</a></li>
+                    <li><a href="">Producto5</a></li>
+                    <li><a href="">Producto6</a></li>
+                    <li><a href="">Producto7</a></li>
+                    <li><a href="">Producto8</a></li>
+                    <li><a href="">Producto9</a></li>
+                    <li><a href="">Producto10</a></li>
 
+                </ul>
+            </li>
+            <li><a>Productos 4</a>
+                <ul class="sub-menu">
+                    <li><button class="Back-menu"><i class="bi bi-caret-left"></i></button></li>
+                    <li><a href="">Algunos Productos</a></li>
+                    <li><a href="">Producto1</a></li>
+                    <li><a href="">Producto2</a></li>
+                    <li><a href="">Producto3</a></li>
+                    <li><a href="">Producto4</a></li>
+                    <li><a href="">Producto5</a></li>
+                    <li><a href="">Producto6</a></li>
+                    <li><a href="">Producto7</a></li>
+                    <li><a href="">Producto8</a></li>
+                    <li><a href="">Producto9</a></li>
+                    <li><a href="">Producto10</a></li>
+                </ul>
+            </li>
+            <li><a>Productos 5</a>
+                <ul class="sub-menu">
+                    <li><button class="Back-menu"><i class="bi bi-caret-left"></i></button></li>
+                    <li><a href="">Algunos Productos</a></li>
+                    <li><a href="">Producto1</a></li>
+                    <li><a href="">Producto2</a></li>
+                    <li><a href="">Producto3</a></li>
+                    <li><a href="">Producto4</a></li>
+                    <li><a href="">Producto5</a></li>
+                    <li><a href="">Producto6</a></li>
+                    <li><a href="">Producto7</a></li>
+                    <li><a href="">Producto8</a></li>
+                    <li><a href="">Producto9</a></li>
+                    <li><a href="">Producto10</a></li>
+                </ul>
+            </li>
+            <li><a>Productos 6</a>
+                <ul class="sub-menu">
+                    <li><button class="Back-menu"><i class="bi bi-caret-left"></i></button></li>
+                    <li><a href="">Algunos Productos</a></li>
+                    <li><a href="">Producto1</a></li>
+                    <li><a href="">Producto2</a></li>
+                    <li><a href="">Producto3</a></li>
+                    <li><a href="">Producto4</a></li>
+                    <li><a href="">Producto5</a></li>
+                    <li><a href="">Producto6</a></li>
+                    <li><a href="">Producto7</a></li>
+                    <li><a href="">Producto8</a></li>
+                    <li><a href="">Producto9</a></li>
+                    <li><a href="">Producto10</a></li>
+                </ul>
+            </li>
+            <li><a href="">Productos 7</a></li>
+            <li><a href="">Productos 8</a></li>
+            <li><a>Productos 9</a></li>
+            <li><a>Productos 10</a></li>
         </ul>
     </div>
     <script src="Menu.js"></script>
